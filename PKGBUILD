@@ -22,7 +22,7 @@ _kernelver="4.19.4.arch1-1"
 _extramodules="${_kernelver/.arch/-arch}-ARCH"
 
 pkgver="${_zfsver}_$(echo ${_kernelver} | sed s/-/./g)"
-pkgrel=1
+pkgrel=2
 makedepends=("linux-headers=${_kernelver}" "spl-linux-headers")
 arch=("x86_64")
 url="http://zfsonlinux.org/"
@@ -47,7 +47,7 @@ package_zfs-linux-rc() {
     install=zfs.install
     provides=("zfs" "spl")
     groups=("archzfs-linux-rc")
-    conflicts=("zfs-dkms" "zfs-dkms-git" "zfs-dkms-rc" 'zfs-linux' 'zfs-linux-git' "spl-dkms" "spl-dkms-git")
+    conflicts=("zfs-dkms" "zfs-dkms-git" "zfs-dkms-rc" 'zfs-linux' 'zfs-linux-git' 'spl-linux' "spl-dkms" "spl-dkms-git")
     replaces=("zfs-git")
     cd "${srcdir}/zfs-${_zfsver/_rc*/}"
     make DESTDIR="${pkgdir}" install

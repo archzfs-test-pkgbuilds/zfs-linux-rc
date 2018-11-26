@@ -1,6 +1,6 @@
 pkgbase = zfs-linux-rc
 	pkgver = 0.8.0_rc2_4.19.4.arch1.1
-	pkgrel = 1
+	pkgrel = 2
 	url = http://zfsonlinux.org/
 	arch = x86_64
 	license = CDDL
@@ -23,6 +23,7 @@ pkgname = zfs-linux-rc
 	conflicts = zfs-dkms-rc
 	conflicts = zfs-linux
 	conflicts = zfs-linux-git
+	conflicts = spl-linux
 	conflicts = spl-dkms
 	conflicts = spl-dkms-git
 	replaces = zfs-git
